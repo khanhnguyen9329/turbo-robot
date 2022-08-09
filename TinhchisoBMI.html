@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><h1>&ensp;&ensp; TÍNH CHỈ SỐ BMI</h1>
+<table class="BMI">
+    <tr>
+        <td>Cân nặng :</td>
+        <td><input type="number" id="weight"    min="0" >  Kg</td>
+    </tr>
+    <tr>
+        <td>Chiều cao :</td>
+        <td><input type="number" id ="height" min="0">  Mét</td>
+    </tr>
+    <tr>
+        <td>Chỉ số BMI :</td>
+        <td><button onclick="index()">Kết Quả</button></td>
+    </tr>
+</table>
+
+<input type="text" id="abc">
+
+<script>
+    function index(){
+        let weight = +document.getElementById("weight").value;
+        let height = +document.getElementById("height").value;
+        let result = weight/ (height*height)
+        if (result <18.5){
+           document.getElementById("abc").value= result.toFixed(3) +"Gầy"
+        } else if (result <25){
+            document.getElementById("abc").value= result.toFixed(3) +"bình thường"
+        }else if (result<30){
+            document.getElementById("abc").value= result.toFixed(3) +"hơi béo"
+
+        }else {
+            document.getElementById("abc").value= result.toFixed(3) + "béo"
+        }
+    }
+
+</script>
+<style>
+    h1 {
+        color: lime;
+    }
+.BMI {
+    color: red;
+    border:10px gold groove;
+    background: burlywood;
+}
+#abc {
+    font-size: 23px;
+    background: burlywood;
+    border:10px red groove;
+
+}
+</style>
+</body>
+</html>

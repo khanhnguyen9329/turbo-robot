@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><form>
+<img id="ball" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGzuq3x30J3bJ3DTDESLIkwr3cMX1TDp8zfyoYyas&s">
+<p>Click vào quả bóng để di chuyển sang phải</p>
+<input type="submit" value="Mời bấm" onclick="movie()" >
+</form>
+<script>
+    let imgball = null;
+    imgball = document.getElementById("ball");
+    function unit(){
+        imgball = document.getElementById("ball");
+        imgball.style.position = 'relative';
+        imgball.style.left= "60px";
+    }
+    function movie(){
+        imgball.style.left= parseInt(imgball.style.left) +50+ "px"
+    }
+    window.onload = unit;
+</script>
+</body>
+</html>
